@@ -1,0 +1,14 @@
+﻿<h1>Hola {{currentUser.firstName}}!</h1>
+<h3>Usuarios Registrados:</h3>
+<ul class="event-list">
+    <li *ngFor="let user of users">
+      <img alt="Independence Day" src="https://cdn3.iconfinder.com/data/icons/avatars-15/64/_Ninja-2-512.png" />
+      <div class="info">
+        <p class="title">{{user.firstName}} {{user.lastName}} -<a (click)="deleteUser(user.id)" class="text-danger">Eliminar</a></p>
+        <p class="desc">Usuario:  {{user.username}} </p>
+        <p class="desc">Direccion:  {{user.address}} </p>
+        <p class="desc">Telefono:  {{user.phone}} </p>
+        <p class="desc">Razon Social:  {{user.businessName}} </p>
+      </div>
+    </li>
+</ul>
